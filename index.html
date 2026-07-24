@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AURORA — Pure CSS Solar System Explorer</title>
+  <link rel="stylesheet" href="style.css">
+  <style></style>
+</head>
+
+<body>
+  <!-- Shooting Stars -->
+  <div class="shooting-star ss-1"></div>
+  <div class="shooting-star ss-2"></div>
+  <div class="shooting-star ss-3"></div>
+  
+  <!-- Comets -->
+  <div class="comet comet-a"></div>
+  <div class="comet comet-b"></div>
+  
+  <!-- Starfield -->
+  <div class="starfield" aria-hidden="true">
+    <div class="stars-layer"></div>
+    <div class="stars-layer"></div>
+    <div class="stars-layer"></div>
+  </div>
+  
+  <!-- Nebula -->
+  <div class="nebula nebula-1"></div>
+  <div class="nebula nebula-2"></div>
+  <div class="nebula nebula-3"></div>
+  
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-logo">☄ AURORA</a>
+    <ul class="nav-links">
+      <li><a href="#solar">Solar System</a></li>
+      <li><a href="#planets">Planets</a></li>
+      <li><a href="#facts">Space Facts</a></li>
+      <li><a href="#timeline">Timeline</a></li>
+    </ul>
+    <div class="nav-badge">
+      <span class="badge-dot" style="background:var(--glow-purple);"></span>
+      Space
+    </div>
+  </nav>
+  
+  <!-- HERO -->
+  <section class="hero" style="padding-top:80px;">
+    <div class="badge">
+      <span class="badge-dot"></span>
+      Interactive Space Explorer
+    </div>
+    
+    <div class="glitch-wrap" data-text="AURORA">
+      <h1 class="hero-title">AURORA</h1>
+    </div>
+    
+    <p class="hero-subtitle">Solar System Explorer</p>
+    
+    <p class="hero-desc">
+      Embark on a breathtaking journey through our solar system.
+      Watch planets orbit in real time, discover cosmic facts, and explore the universe —
+      all powered by <strong style="color:var(--glow-blue)">zero lines of JavaScript.</strong>
+    </p>
+    
+    <div class="hero-cta">
+      <a href="#solar" class="btn-primary">🚀 Explore the System</a>
+      <a href="#planets" class="btn-secondary">🪐 View Planets</a>
+    </div>
+    
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+  
+  <!-- TECH STRIP -->
+  
+  <!-- STATS BAR -->
+  <div class="stats-bar">
+    <div class="stats-inner">
+      <div class="stat-box">
+        <span class="stat-num">8</span>
+        <span class="stat-name">Planets Orbiting</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-num">0<span style="font-size:1.5rem">JS</span></span>
+        <span class="stat-name">Lines of JavaScript</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-num">∞</span>
+        <span class="stat-name">CSS Animations</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-num">4.6<span style="font-size:1.5rem">B</span></span>
+        <span class="stat-name">Years of History</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-num">227</span>
+        <span class="stat-name">CSS Properties Used</span>
+      </div>
+    </div>
+  </div>
+  
+  <!-- SOLAR SYSTEM ORRERY -->
+  <section class="solar-section" id="solar">
+    <div class="section-header">
+      <p class="section-label">☀ Live Animation</p>
+      <h2 class="section-title">The Solar Orrery</h2>
+      <p class="section-desc">A real-time CSS-animated model of our solar system. Each planet orbits at a speed proportional to its actual orbital period.</p>
+    </div>
+    
+    <div class="orrery-wrapper">
+      <div class="orrery">
+        
+        <!-- Pulsating system rings -->
+        <div class="system-ring ring-1"></div>
+        <div class="system-ring ring-2"></div>
+        <div class="system-ring ring-3"></div>
+        
+        <!-- Orbit rings (visual) -->
+        <div class="orbit mercury-orbit"></div>
+        <div class="orbit venus-orbit"></div>
+        <div class="orbit earth-orbit"></div>
+        <div class="orbit mars-orbit"></div>
+        <div class="asteroid-belt"></div>
+        <div class="orbit jupiter-orbit"></div>
+        <div class="orbit saturn-orbit"></div>
+        <div class="orbit uranus-orbit"></div>
+        <div class="orbit neptune-orbit"></div>
+        
+        <!-- Sun -->
+        <div class="sun"></div>
+        
+        <!-- Mercury -->
+        <div class="planet-wrapper mercury-wrapper">
+          <div class="planet-body mercury">
+            <span class="planet-label">Mercury</span>
+          </div>
+        </div>
+        
+        <!-- Venus -->
+        <div class="planet-wrapper venus-wrapper">
+          <div class="planet-body venus">
+            <span class="planet-label">Venus</span>
+          </div>
+        </div>
+        
+        <!-- Earth -->
+        <div class="planet-wrapper earth-wrapper">
+          <div class="planet-body earth">
+            <div class="moon-orbit">
+              <div class="moon"></div>
+            </div>
+            <span class="planet-label">Earth</span>
+          </div>
+        </div>
+        
+        <!-- Mars -->
+        <div class="planet-wrapper mars-wrapper">
+          <div class="planet-body mars">
+            <span class="planet-label">Mars</span>
+          </div>
+        </div>
+        
+        <!-- Jupiter -->
+        <div class="planet-wrapper jupiter-wrapper">
+          <div class="planet-body jupiter">
+            <span class="planet-label">Jupiter</span>
+          </div>
+        </div>
+        
+        <!-- Saturn -->
+        <div class="planet-wrapper saturn-wrapper">
+          <div class="planet-body saturn">
+            <span class="planet-label">Saturn</span>
+          </div>
+        </div>
+        
+        <!-- Uranus -->
+        <div class="planet-wrapper uranus-wrapper">
+          <div class="planet-body uranus">
+            <span class="planet-label">Uranus</span>
+          </div>
+        </div>
+        
+        <!-- Neptune -->
+        <div class="planet-wrapper neptune-wrapper">
+          <div class="planet-body neptune">
+            <span class="planet-label">Neptune</span>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+    <p style="text-align:center; color:rgba(255,255,255,0.25); font-size:0.7rem; letter-spacing:3px; text-transform:uppercase; margin-top:-1rem;">
+      ↑ Hover any planet to reveal its name · All animations are pure CSS
+    </p>
+  </section>
+  
+  <!-- PLANET CARDS -->
+  <section class="planets-section" id="planets">
+    <div class="section-header">
+      <p class="section-label">🪐 Our Neighbors</p>
+      <h2 class="section-title">The Planets</h2>
+      <p class="section-desc">Detailed profiles of every planet in our solar system, rendered with pure CSS visuals.</p>
+    </div>
+    
+    <div class="planet-cards-grid">
+      
+      <!-- Mercury -->
+      <div class="planet-card card-mercury">
+        <div class="card-planet-visual" style="background:radial-gradient(circle at 35% 30%, #d4d4d4, #8a8a8a 60%, #555 100%); box-shadow: 0 0 20px rgba(200,200,200,0.3);"></div>
+        <p class="card-planet-name">Mercury</p>
+        <p class="card-planet-type">Terrestrial Planet</p>
+        <div class="card-stats">
+          <div class="stat-row">
+            <span class="stat-label">Distance from Sun</span>
+            <span class="stat-value" style="color:#d4d4d4;">57.9M km</span>
+          </div>
+          <div class="stat-bar-wrap">
+            <div class="stat-bar" style="width:8%; background:linear-gradient(90deg,#888,#d4d4d4);"></div>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label">Orbital Period</span>
+            <span class="stat-value" style="color:#d4d4d4;">88 days</span>
+          </div>
+          <div class="stat-bar-wrap">
+            <div class="stat-bar" style="width:5%; background:linear-gradient(90deg,#888,#d4d4d4);"></div>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label">Surface Temp</span>
+            <span class="stat-value" style="color:#d4d4d4;">430°C</span>
+          </div>
+          <div class="stat-bar-wrap">
+            <div class="stat-bar" style="width:70%; background:linear-gradient(90deg,#888,#d4d4d4);"></div>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label">Moons</span>
+            <span class="stat-value" style="color:#d4d4d4;">0</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Venus -->
+      <div class="planet-card card-venus">
+        <div class="card-planet-visual" style="background:radial-gradient(circle at 35% 30%, #fff5c2, #e8c830 40%, #b8860b 80%, #8b6914 100%); box-shadow: 0 0 25px rgba(232,200,48,0.5), 0 0 50px rgba(232,200,48,0.2);"></div>
+        <p class="card-planet-name">Venus</p>
+        <p class="card-planet-type">Terrestrial Planet</p>
+        <div class="card-stats">
+          <div class="stat-row">
+            <span class="stat-label">Distance from Sun</span>
+            <span class="stat-value" style="color:var(--glow-yellow);">108.2M km</span>
+          </div>
+          <div class="stat-bar-wrap">
+            <div class="stat-bar" style="width:15%; background:linear-gradient(90deg,#b8860b,#ffe066);"></div>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label">Orbital Period</span>
+            <span class="stat-value" style="color:var(--glow-yellow);">225 days</span>
+          </div>
+          <div class="stat-bar-wrap">
+            <div class="stat-bar" style="width:13%; background:linear-gradient(90deg,#b8860b,#ffe066);"></div>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label">Surface Temp</span>
+            <span class="stat-value" style="color:var(--glow-yellow);">465°C</span>
+          </div>
+          <div class="stat-bar-wrap">
+            <div class="stat-bar" style="width:75%; background:linear-gradient(90deg,#b8860b,#ffe066);"></div>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label">Moons</span>
+            <span class="stat-value" style="color:var(--glow-yellow);">0</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Earth -->
+      <div class="planet-card card-earth">
+        <div class="card-planet-visual" style="background:radial-gradient(circle at 35% 30%, #7dd3fc, #2563eb 30%, #15803d 55%, #1d4ed8 75%, #0c4a6e 100%); box-shadow: 0 0 25px rgba(59,130,246,0.5), 0 0 50px rgba(59,130,246,0.25);"></div>
+        <p class="card-planet-name">Earth</p>
+        <p class="card-planet-type">Terrestrial Planet</p>
+        <div class="card-stats">
+          <div class="stat-row">
+            <span class="stat-label">Distance from Sun</span>
+            <span class="stat-value" style="color:#7dd3fc;">149.6M km</span>
+          </div>
+          <div class="stat-bar-wrap">
+            <div class="stat-bar" style="width:20%; background:linear-gradient(90deg,#1d4ed8,#7dd3fc);"></div>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label">Orbital Period</span>
+            <span class="stat-value" style="color:#7dd3fc;">365.25 days</span>
+          </div>
+          <div class="stat-bar-wrap">
+            <div class="stat-bar" style="width:20%; background:linear-gradient(90deg,#1d4ed8,#7dd3fc);"></div>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label">Surface Temp</span>
+            <span class="stat-value" style="color:#7dd3fc;">15°C avg</span>
+          </div>
+          <div class="stat-bar-wrap">
+            <div class="stat-bar" style="width:20%; background:linear-gradient(90deg,#1d4ed8,#7dd3fc);"></div>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label">Moons</span>
+            <span class="stat-value" style="color:#7dd3fc;">1</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Mars -->
+      <div class="planet-card card-mars">
+        <div class="card-planet-visual" style="background:radial-gradient(circle at 35% 30%, #fca5a5, #ef4444 40%, #b91c1c 80%, #7f1d1d 100%); box-shadow: 0 0 25px rgba(239,68,68,0.5), 0 0 50px rgba(239,68,68,0.2);"></div>
+        <p class="card-planet-name">Mars</p>
+        <p class="card-planet-type">Terrestrial Planet</p>
+        <div class="card-stats">
+          <div class="stat-row">
+            <span class="stat-label">Distance from Sun</span>
+            <span class="stat-value" style="color:#fca5a5;">227.9M km</span>
+          </div>
+          <div class="stat-bar-wrap">
+            <div class="stat-bar" style="width:30%; background:linear-gradient(90deg,#7f1d1d,#fca5a5);"></div>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label">Orbital Period</span>
+            <span class="stat-value" style="color:#fca5a5;">687 days</span>
+          </div>
+          <div class="stat-bar-wrap">
+            <div class="stat-bar" style="width:37%; background:linear-gradient(90deg,#7f1d1d,#fca5a5);"></div>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label">Surface Temp</span>
+            <span class="stat-value" style="color:#fca5a5;">-63°C avg</span>
+          </div>
+          <div class="stat-bar-wrap">
+            <div class="stat-bar" style="width:15%; background:linear-gradient(90deg,#7f1d1d,#fca5a5);"></div>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label">Moons</span>
+            <span class="stat-value" style="color:#fca5a5;">2</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Jupiter -->
+      <div class="planet-card card-jupiter">
+        <div class="card-planet-visual" style="background:radial-gradient(ellipse at 40% 40%, #f5d0a9, #c8a26b 25%, #a0522d 45%, #c8a26b 60%, #e8c49a 75%); box-shadow: 0 0 25px rgba(200,162,107,0.5), 0 0 50px rgba(200,162,107,0.25);"></div>
+        <p class="card-planet-name">Jupiter</p>
+        <p class="card-planet-type">Gas Giant</p>
+        <div class="card-stats">
+          <div class="stat-row">
+            <span class="stat-label">Distance from Sun</span>
+            <span class="stat-value" style="color:#f5d0a9;">778.5M km</span>
+          </div>
+          <div class="stat-bar-wrap">
+            <div class="stat-bar" style="width:55%; background:linear-gradient(90deg,#7c5a2a,#f5d0a9);"></div>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label">Orbital Period</span>
+            <span class="stat-value" style="color:#f5d0a9;">11.9 years</span>
+          </div>
+          <div class="stat-bar-wrap">
+            <div class="stat-bar" style="width:60%; background:linear-gradient(90deg,#7c5a2a,#f5d0a9);"></div>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label">Mass (vs Earth)</span>
+            <span class="stat-value" style="color:#f5d0a9;">317.8×</span>
+          </div>
+          <div class="stat-bar-wrap">
+            <div class="stat-bar" style="width:95%; background:linear-gradient(90deg,#7c5a2a,#f5d0a9);"></div>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label">Moons</span>
+            <span class="stat-value" style="color:#f5d0a9;">95</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Saturn -->
+      <div class="planet-card card-saturn">
+        <div class="card-planet-visual" style="background:radial-gradient(ellipse at 40% 35%, #f5e6a3, #d4b483 30%, #c19a49 60%, #a07830 100%); box-shadow: 0 0 25px rgba(212,180,131,0.5), 0 0 50px rgba(212,180,131,0.2);">
+          <div style="position:absolute;width:130px;height:25px;border-radius:50%;border:3px solid rgba(220,185,100,0.6);top:50%;left:50%;transform:translate(-50%,-50%) rotateX(75deg);pointer-events:none;"></div>
+          <div style="position:absolute;width:160px;height:30px;border-radius:50%;border:2px solid rgba(180,145,80,0.3);top:50%;left:50%;transform:translate(-50%,-50%) rotateX(75deg);pointer-events:none;"></div>
+        </div>
+        <p class="card-planet-name">Saturn</p>
+        <p class="card-planet-type">Gas Giant · Ring System</p>
+        <div class="card-stats">
+          <div class="stat-row">
+            <span class="stat-label">Distance from Sun</span>
+            <span class="stat-value" style="color:#f5e6a3;">1.43B km</span>
+          </div>
+          <div class="stat-bar-wrap">
+            <div class="stat-bar" style="width:68%; background:linear-gradient(90deg,#78611a,#f5e6a3);"></div>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label">Orbital Period</span>
+            <span class="stat-value" style="color:#f5e6a3;">29.5 years</span>
+          </div>
+          <div class="stat-bar-wrap">
+            <div class="stat-bar" style="width:75%; background:linear-gradient(90deg,#78611a,#f5e6a3);"></div>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label">Ring Width</span>
+            <span class="stat-value" style="color:#f5e6a3;">282,000 km</span>
+          </div>
+          <div class="stat-bar-wrap">
+            <div class="stat-bar" style="width:90%; background:linear-gradient(90deg,#78611a,#f5e6a3);"></div>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label">Moons</span>
+            <span class="stat-value" style="color:#f5e6a3;">146</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Uranus -->
+      <div class="planet-card card-uranus">
+        <div class="card-planet-visual" style="background:radial-gradient(circle at 35% 30%, #a5f3fc, #22d3ee 40%, #0891b2 80%, #0e7490 100%); box-shadow: 0 0 25px rgba(34,211,238,0.5), 0 0 50px rgba(34,211,238,0.2);">
+          <div style="position:absolute;width:120px;height:20px;border-radius:50%;border:2px solid rgba(167,243,252,0.4);top:50%;left:50%;transform:translate(-50%,-50%) rotateX(20deg) rotate(90deg);pointer-events:none;"></div>
+        </div>
+        <p class="card-planet-name">Uranus</p>
+        <p class="card-planet-type">Ice Giant</p>
+        <div class="card-stats">
+          <div class="stat-row">
+            <span class="stat-label">Distance from Sun</span>
+            <span class="stat-value" style="color:#a5f3fc;">2.87B km</span>
+          </div>
+          <div class="stat-bar-wrap">
+            <div class="stat-bar" style="width:82%; background:linear-gradient(90deg,#0e7490,#a5f3fc);"></div>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label">Orbital Period</span>
+            <span class="stat-value" style="color:#a5f3fc;">84 years</span>
+          </div>
+          <div class="stat-bar-wrap">
+            <div class="stat-bar" style="width:88%; background:linear-gradient(90deg,#0e7490,#a5f3fc);"></div>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label">Axial Tilt</span>
+            <span class="stat-value" style="color:#a5f3fc;">97.77°</span>
+          </div>
+          <div class="stat-bar-wrap">
+            <div class="stat-bar" style="width:97%; background:linear-gradient(90deg,#0e7490,#a5f3fc);"></div>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label">Moons</span>
+            <span class="stat-value" style="color:#a5f3fc;">28</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Neptune -->
+      <div class="planet-card card-neptune">
+        <div class="card-planet-visual" style="background:radial-gradient(circle at 35% 30%, #a5b4fc, #6366f1 40%, #4338ca 80%, #3730a3 100%); box-shadow: 0 0 25px rgba(99,102,241,0.5), 0 0 50px rgba(99,102,241,0.2);"></div>
+        <p class="card-planet-name">Neptune</p>
+        <p class="card-planet-type">Ice Giant</p>
+        <div class="card-stats">
+          <div class="stat-row">
+            <span class="stat-label">Distance from Sun</span>
+            <span class="stat-value" style="color:#a5b4fc;">4.49B km</span>
+          </div>
+          <div class="stat-bar-wrap">
+            <div class="stat-bar" style="width:96%; background:linear-gradient(90deg,#3730a3,#a5b4fc);"></div>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label">Orbital Period</span>
+            <span class="stat-value" style="color:#a5b4fc;">164.8 years</span>
+          </div>
+          <div class="stat-bar-wrap">
+            <div class="stat-bar" style="width:100%; background:linear-gradient(90deg,#3730a3,#a5b4fc);"></div>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label">Wind Speed</span>
+            <span class="stat-value" style="color:#a5b4fc;">2,100 km/h</span>
+          </div>
+          <div class="stat-bar-wrap">
+            <div class="stat-bar" style="width:88%; background:linear-gradient(90deg,#3730a3,#a5b4fc);"></div>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label">Moons</span>
+            <span class="stat-value" style="color:#a5b4fc;">16</span>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+  
+  <!-- SPACE FACTS -->
+  <section class="facts-section" id="facts">
+    <div class="section-header">
+      <p class="section-label">💡 Mind Blown</p>
+      <h2 class="section-title">Cosmic Facts</h2>
+      <p class="section-desc">Numbers so staggering they'll redefine your understanding of scale and existence.</p>
+    </div>
+    
+    <div class="facts-grid">
+      
+      <div class="fact-card" style="--accent:var(--glow-blue);" onmouseover="this.style.borderColor='rgba(0,212,255,0.3)'; this.style.boxShadow='0 20px 60px rgba(0,212,255,0.1)';" onmouseout="this.style.borderColor='rgba(255,255,255,0.07)'; this.style.boxShadow='';">
+        <span class="fact-icon">☀️</span>
+        <div class="fact-number" style="--accent:var(--glow-yellow);">109×</div>
+        <div class="fact-label">Sun to Earth Diameter</div>
+        <p class="fact-desc">The Sun's diameter is about 109 times that of Earth. You could fit over 1.3 million Earths inside the Sun.</p>
+      </div>
+      
+      <div class="fact-card" style="--accent:var(--glow-purple);" onmouseover="this.style.borderColor='rgba(168,85,247,0.3)'; this.style.boxShadow='0 20px 60px rgba(168,85,247,0.1)';" onmouseout="this.style.borderColor='rgba(255,255,255,0.07)'; this.style.boxShadow='';">
+        <span class="fact-icon">🌌</span>
+        <div class="fact-number" style="background:linear-gradient(135deg,var(--glow-purple),#fff);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;">2T+</div>
+        <div class="fact-label">Galaxies in Observable Universe</div>
+        <p class="fact-desc">Modern estimates suggest there are over 2 trillion galaxies in the observable universe — each containing billions of stars.</p>
+      </div>
+      
+      <div class="fact-card" style="--accent:var(--glow-teal);" onmouseover="this.style.borderColor='rgba(0,255,204,0.3)'; this.style.boxShadow='0 20px 60px rgba(0,255,204,0.1)';" onmouseout="this.style.borderColor='rgba(255,255,255,0.07)'; this.style.boxShadow='';">
+        <span class="fact-icon">💫</span>
+        <div class="fact-number" style="background:linear-gradient(135deg,var(--glow-teal),#fff);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;">299K</div>
+        <div class="fact-label">Speed of Light (km/s)</div>
+        <p class="fact-desc">Light travels 299,792 km every second. It takes light about 8 minutes 20 seconds to travel from the Sun to Earth.</p>
+      </div>
+      
+      <div class="fact-card" style="--accent:var(--glow-orange);" onmouseover="this.style.borderColor='rgba(255,140,0,0.3)'; this.style.boxShadow='0 20px 60px rgba(255,140,0,0.1)';" onmouseout="this.style.borderColor='rgba(255,255,255,0.07)'; this.style.boxShadow='';">
+        <span class="fact-icon">🌑</span>
+        <div class="fact-number" style="background:linear-gradient(135deg,var(--glow-orange),#fff);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;">-270°C</div>
+        <div class="fact-label">Temperature of Space</div>
+        <p class="fact-desc">The average temperature of space is -270.45°C (2.7K), just barely above absolute zero — the coldest possible temperature.</p>
+      </div>
+      
+      <div class="fact-card" style="--accent:var(--glow-red);" onmouseover="this.style.borderColor='rgba(255,69,0,0.3)'; this.style.boxShadow='0 20px 60px rgba(255,69,0,0.1)';" onmouseout="this.style.borderColor='rgba(255,255,255,0.07)'; this.style.boxShadow='';">
+        <span class="fact-icon">🌪️</span>
+        <div class="fact-number" style="background:linear-gradient(135deg,var(--glow-red),#fff);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;">350yr</div>
+        <div class="fact-label">Jupiter's Great Red Spot Age</div>
+        <p class="fact-desc">Jupiter's Great Red Spot is a storm that has been continuously raging for over 350 years — larger than Earth itself.</p>
+      </div>
+      
+      <div class="fact-card" style="--accent:var(--glow-ice);" onmouseover="this.style.borderColor='rgba(174,233,255,0.3)'; this.style.boxShadow='0 20px 60px rgba(174,233,255,0.1)';" onmouseout="this.style.borderColor='rgba(255,255,255,0.07)'; this.style.boxShadow='';">
+        <span class="fact-icon">🪐</span>
+        <div class="fact-number" style="background:linear-gradient(135deg,var(--glow-ice),#fff);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;">0.69</div>
+        <div class="fact-label">Saturn's Density (g/cm³)</div>
+        <p class="fact-desc">Saturn is so low in density it would float on water! It's the only planet in our solar system less dense than water.</p>
+      </div>
+      
+    </div>
+  </section>
+  
+  <!-- EXPLORE CARDS -->
+  <section class="explore-section" id="explore">
+    <div class="section-header">
+      <p class="section-label">🔭 Deep Dive</p>
+      <h2 class="section-title">Explore Further</h2>
+      <p class="section-desc">From black holes to the edge of the observable universe — the cosmos awaits.</p>
+    </div>
+    
+    <div class="explore-grid">
+      
+      <div class="explore-card" style="border-color:rgba(168,85,247,0.15);" onmouseover="this.style.borderColor='rgba(168,85,247,0.4)'; this.style.boxShadow='0 30px 80px rgba(168,85,247,0.2)';" onmouseout="this.style.borderColor='rgba(168,85,247,0.15)'; this.style.boxShadow='';">
+        <div class="ec-glow" style="background:radial-gradient(circle, rgba(168,85,247,0.4), transparent);"></div>
+        <div class="ec-number">01 / PHENOMENON</div>
+        <div class="ec-title" style="color:#c084fc;">Black Holes</div>
+        <p class="ec-desc">Regions of spacetime where gravity is so strong that nothing — not even light — can escape. At the center lies a singularity of infinite density.</p>
+        <span class="ec-tag" style="border-color:rgba(168,85,247,0.3);color:rgba(168,85,247,0.7);">General Relativity →</span>
+      </div>
+      
+      <div class="explore-card" style="border-color:rgba(0,212,255,0.15);" onmouseover="this.style.borderColor='rgba(0,212,255,0.4)'; this.style.boxShadow='0 30px 80px rgba(0,212,255,0.15)';" onmouseout="this.style.borderColor='rgba(0,212,255,0.15)'; this.style.boxShadow='';">
+        <div class="ec-glow" style="background:radial-gradient(circle, rgba(0,212,255,0.3), transparent);"></div>
+        <div class="ec-number">02 / STRUCTURE</div>
+        <div class="ec-title" style="color:#67e8f9;">Neutron Stars</div>
+        <p class="ec-desc">The densest objects in the known universe — a teaspoon of neutron star material would weigh about 10 million tons on Earth.</p>
+        <span class="ec-tag" style="border-color:rgba(0,212,255,0.3);color:rgba(0,212,255,0.7);">Stellar Physics →</span>
+      </div>
+      
+      <div class="explore-card big" style="border-color:rgba(255,140,0,0.15);" onmouseover="this.style.borderColor='rgba(255,140,0,0.4)'; this.style.boxShadow='0 30px 80px rgba(255,140,0,0.15)';" onmouseout="this.style.borderColor='rgba(255,140,0,0.15)'; this.style.boxShadow='';">
+        <div class="ec-glow" style="background:radial-gradient(circle, rgba(255,140,0,0.3), transparent);"></div>
+        <div class="ec-number">03 / ORIGIN</div>
+        <div class="ec-title" style="color:#fb923c;">The Big Bang &amp; Cosmic Inflation</div>
+        <p class="ec-desc">
+          Approximately 13.8 billion years ago, the universe erupted from an infinitely dense, infinitely hot singularity.
+          In the first fraction of a second, it underwent cosmic inflation — expanding faster than the speed of light —
+          setting the stage for galaxies, stars, planets, and ultimately life itself.
+          Everything you see, touch, or are, traces its origin to that single moment.
+        </p>
+        <span class="ec-tag" style="border-color:rgba(255,140,0,0.3);color:rgba(255,140,0,0.7);">Cosmology →</span>
+      </div>
+      
+    </div>
+  </section>
+  
+  <!-- TIMELINE -->
+  <section class="timeline-section" id="timeline">
+    <div class="section-header">
+      <p class="section-label">⏳ Through Time</p>
+      <h2 class="section-title">Space Exploration Timeline</h2>
+      <p class="section-desc">Humanity's greatest journey — from first satellites to interstellar probes.</p>
+    </div>
+    
+    <div class="timeline">
+      
+      <div class="timeline-item">
+        <div class="tl-dot" style="border-color:var(--glow-blue); box-shadow:0 0 10px var(--glow-blue);"></div>
+        <div class="tl-content">
+          <div class="tl-year" style="color:var(--glow-blue);">1957</div>
+          <div class="tl-title">Sputnik 1 — First Satellite</div>
+          <p class="tl-desc">The Soviet Union launches Sputnik 1, the first artificial Earth satellite, marking the dawn of the Space Age.</p>
+        </div>
+      </div>
+      
+      <div class="timeline-item">
+        <div class="tl-dot" style="border-color:var(--glow-yellow); box-shadow:0 0 10px var(--glow-yellow);"></div>
+        <div class="tl-content">
+          <div class="tl-year" style="color:var(--glow-yellow);">1961</div>
+          <div class="tl-title">Yuri Gagarin — First Human in Space</div>
+          <p class="tl-desc">Soviet cosmonaut Yuri Gagarin becomes the first human to travel into space aboard Vostok 1, orbiting Earth once.</p>
+        </div>
+      </div>
+      
+      <div class="timeline-item">
+        <div class="tl-dot" style="border-color:var(--glow-teal); box-shadow:0 0 10px var(--glow-teal);"></div>
+        <div class="tl-content">
+          <div class="tl-year" style="color:var(--glow-teal);">1969</div>
+          <div class="tl-title">Apollo 11 — Moon Landing</div>
+          <p class="tl-desc">Neil Armstrong and Buzz Aldrin become the first humans to walk on the Moon. "One giant leap for mankind."</p>
+        </div>
+      </div>
+      
+      <div class="timeline-item">
+        <div class="tl-dot" style="border-color:var(--glow-orange); box-shadow:0 0 10px var(--glow-orange);"></div>
+        <div class="tl-content">
+          <div class="tl-year" style="color:var(--glow-orange);">1977</div>
+          <div class="tl-title">Voyager 1 &amp; 2 — Deep Space</div>
+          <p class="tl-desc">NASA launches the Voyager probes. Voyager 1 is now the farthest human-made object, over 23 billion km from Earth.</p>
+        </div>
+      </div>
+      
+      <div class="timeline-item">
+        <div class="tl-dot" style="border-color:var(--glow-purple); box-shadow:0 0 10px var(--glow-purple);"></div>
+        <div class="tl-content">
+          <div class="tl-year" style="color:var(--glow-purple);">1990</div>
+          <div class="tl-title">Hubble Space Telescope</div>
+          <p class="tl-desc">The Hubble Space Telescope is deployed, forever changing our view of the cosmos with millions of deep-space images.</p>
+        </div>
+      </div>
+      
+      <div class="timeline-item">
+        <div class="tl-dot" style="border-color:var(--glow-red); box-shadow:0 0 10px var(--glow-red);"></div>
+        <div class="tl-content">
+          <div class="tl-year" style="color:var(--glow-red);">2004</div>
+          <div class="tl-title">Mars Rovers — Spirit &amp; Opportunity</div>
+          <p class="tl-desc">NASA's twin Mars Exploration Rovers land on Mars, exploring for years and confirming evidence of ancient liquid water.</p>
+        </div>
+      </div>
+      
+      <div class="timeline-item">
+        <div class="tl-dot" style="border-color:#f0f; box-shadow:0 0 10px #f0f;"></div>
+        <div class="tl-content">
+          <div class="tl-year" style="color:#f0f;">2021</div>
+          <div class="tl-title">James Webb Space Telescope</div>
+          <p class="tl-desc">JWST launches and delivers the deepest infrared images of the universe ever captured, peering back 13.6 billion years.</p>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+  
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-logo">☄ AURORA</div>
+    <p class="footer-tagline">Solar System Explorer · Crafted with Pure HTML &amp; CSS</p>
+    <p class="footer-credit">Built for the Hackathon · <span>Zero JavaScript · 100% CSS Magic</span></p>
+  </footer>
+  
+</body>
+
+</html>
